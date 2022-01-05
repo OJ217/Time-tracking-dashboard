@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom";
+import App from "./components/App";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById("root"));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+var buttons = document.getElementsByTagName("button");
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", () => {
+    buttons[i].classList.add("active");
+    buttons[i].classList.remove("not-active");
+    for (var j = 0; j < buttons.length; j++) {
+      if (j !== i) {
+        buttons[j].classList.remove("active");
+        buttons[j].classList.add("not-active");
+      }
+    }
+  });
+}
