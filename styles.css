@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background-color: #0f1424;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.profile-container {
+  max-width: 260px;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #1c1f4a;
+  overflow: hidden;
+}
+
+.profile-container .top-container {
+  padding: 30px 80px 80px 30px;
+  background-color: #5847eb;
+  border-radius: 20px;
+}
+
+.profile-container .top-container img {
+  width: 90px;
+  height: 90px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 36px;
+}
+
+.profile-container .top-container h1 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 44px;
+  max-width: 140px;
+}
+
+.profile-container .top-container h1 span {
+  font-size: 16px;
+  color: #bdc1ff;
+}
+
+.profile-container .bottom-container {
+  padding: 30px;
+}
+
+.profile-container .bottom-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 20px;
+  font-weight: 300;
+}
+
+.profile-container .bottom-container form button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.profile-container .bottom-container form button.active {
+  color: #fff;
+}
+
+.profile-container .bottom-container form button.active:hover {
+  cursor: pointer;
+}
+
+.profile-container .bottom-container form button.not-active {
+  color: #6f76c8;
+}
+
+.profile-container .bottom-container form button.not-active:hover {
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.dashboard-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.activity-card-container {
+  position: relative;
+  width: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: 90% -8%;
+}
+
+.activity-card-container .activity-container {
+  background-color: #1c1f4a;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.activity-card-container .activity-container:hover {
+  background-color: #33387a;
+  cursor: pointer;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+.activity-card-container .activity-container .activity-description {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.activity-card-container .activity-container .activity-description h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.activity-card-container .activity-container .activity-description div:hover > svg > path {
+  fill: #fff;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+.activity-card-container .activity-container .activity-description div:hover {
+  cursor: pointer;
+}
+
+.activity-card-container .activity-container .activity-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 20px;
+}
+
+.activity-card-container .activity-container .activity-data h1 {
+  font-size: 54px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.activity-card-container .activity-container .activity-data p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #bdc1ff;
+}
+
+.work {
+  background-color: #ff8c66;
+  background-image: url("./images/icon-work.svg");
+}
+
+.play {
+  background-color: #56c2e6;
+  background-image: url("./images/icon-play.svg");
+}
+
+.study {
+  background-color: #ff5c7c;
+  background-image: url("./images/icon-study.svg");
+}
+
+.exercise {
+  background-color: #4acf81;
+  background-image: url("./images/icon-exercise.svg");
+  background-position: 90% 0%;
+}
+
+.social {
+  background-color: #7536d3;
+  background-image: url("./images/icon-social.svg");
+}
+
+.self-care {
+  background-color: #f1c65b;
+  background-image: url("./images/icon-self-care.svg");
+  background-position: 90% -6%;
+}
+
+.active {
+  color: #fff;
+}
+
+.not-active {
+  color: #6f76c8;
+}
+
+@media only screen and (max-width: 1160px) {
+  body {
+    padding: 24px;
+  }
+  .top-container h1 {
+    font-size: 33px !important;
+  }
+  .top-container h1 span {
+    font-size: 12px !important;
+  }
+  .bottom-container button {
+    font-size: 12px !important;
+  }
+  .activity-card-container {
+    max-width: 260px;
+    width: auto;
+  }
+  .activity-card-container .activity-description h1 {
+    font-size: 13.5px !important;
+  }
+  .activity-card-container .activity-data h1 {
+    font-size: 40.5px !important;
+  }
+  .activity-card-container .activity-data p {
+    font-size: 12px !important;
+  }
+}
+
+@media only screen and (max-width: 852px) {
+  .main-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile-container {
+    max-width: none;
+    width: 412px;
+    height: auto;
+  }
+  .profile-container .top-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px;
+  }
+  .profile-container .top-container img {
+    margin: 0%;
+  }
+  .profile-container .top-container h1 {
+    max-width: none;
+  }
+  .profile-container .bottom-container form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .dashboard-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .dashboard-container .activity-card-container {
+    max-width: none;
+    width: 412px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .profile-container {
+    width: 340px;
+  }
+  .profile-container .top-container {
+    gap: 48px;
+  }
+  .profile-container .top-container h1 {
+    margin-top: -12px;
+  }
+  .activity-card-container {
+    width: 340px !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
